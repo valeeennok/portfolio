@@ -1,0 +1,78 @@
+---
+import javasript from "../components/icons/Javascript.astro";
+import react from "../components/icons/React.astro";
+import tailwind from "../components/icons/Tailwind.astro";
+import css from "../components/icons/Css.astro";
+import astro from "./icons/Astroo.astro";
+import vue from "../components/icons/Vue.astro";
+import gitHub from "../components/icons/GitHub.astro";
+import linkedin from "../components/icons/LinkedIn.astro";
+import html from "../components/icons/Html.astro";
+
+const TAGS = {
+    REACT: {
+        name: "React",
+        class: "color-blue-500",
+        icon: react,
+    },
+
+    JAVASCRiPT: {
+        title: "JAVASCRiPT",
+        class: "text-white",
+        icon: javasript,
+    },
+
+    TAILWIND: {
+        name: "Tailwind",
+        class: " text-white",
+        icon: tailwind,
+    },
+
+    CSS: {
+        name: "CSS",
+        class: " text-white",
+        icon: css,
+    },
+
+    ASTRO: {
+        name: "Astro",
+        class: " text-white",
+        icon: astro,
+    },
+
+    VUE: {
+        name: "Vue",
+        class: " text-white",
+        icon: vue,
+    },
+    HTML: {
+        name: "Html",
+        class: " text-white",
+        icon: html,
+    },
+};
+---
+
+<div class=" flex flex-wrap gap-x-6 md:flex-row   ">
+    <div class="mb-5" >
+        <TAGS.REACT.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.JAVASCRiPT.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.TAILWIND.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.CSS.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.ASTRO.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.VUE.icon class="size-12" />
+    </div>
+    <div class="mb-5">
+        <TAGS.HTML.icon class="size-12" />
+    </div>
+</div>

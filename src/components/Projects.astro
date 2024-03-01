@@ -1,0 +1,133 @@
+---
+import javasript from "../components/icons/Javascript.astro";
+import react from "../components/icons/React.astro";
+import tailwind from "../components/icons/Tailwind.astro";
+import css from "../components/icons/Css.astro";
+import astro from "./icons/Astroo.astro";
+import vue from "../components/icons/Vue.astro";
+import gitHub from "../components/icons/GitHub.astro";
+import linkedin from "../components/icons/LinkedIn.astro";
+
+const TAGS = {
+    REACT: {
+        name: "React",
+        class: "color-blue-500",
+        icon: react,
+    },
+
+    JAVASCRiPT: {
+        title: "JAVASCRiPT",
+        class: "text-white",
+        icon: javasript,
+    },
+
+    TAILWIND: {
+        name: "Tailwind",
+        class: " text-white",
+        icon: tailwind,
+    },
+
+    CSS: {
+        name: "CSS",
+        class: " text-white",
+        icon: css,
+    },
+
+    ASTRO: {
+        name: "Astro",
+        class: " text-white",
+        icon: astro,
+    },
+
+    VUE: {
+        name: "Vue",
+        class: " text-white",
+        icon: vue,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Tic-Tac-Toe",
+        description:
+            "Pagina web para jugar al tic-tac-toe. Creada a partir de React y Css ",
+        link: "https://tic-tac-toooee.netlify.app/",
+        gitHub: gitHub,
+        gitHubLink: "https://github.com/valeeennok/tres-en-linea",
+        Image: "177shots_so.webp",
+        tags: [TAGS.REACT, TAGS.CSS],
+    },
+    {
+        title: "Buscador de Clima",
+        description:
+            "Pagina web para buscador el clima por ciudades de todo el mundo. Craeda a partir de React y Css ",
+        link: "https://aplicacion-clima-react-cursoo.netlify.app/",
+        gitHub: gitHub,
+        gitHubLink: "https://github.com/valeeennok/aplicacion-clima-react",
+        Image: "842shots_so.webp",
+        tags: [TAGS.REACT, TAGS.CSS],
+    },
+
+    {
+        title: "Buscador de Peliculas",
+        description:
+            "Sitio Para buscar tus pelicuas favoritas. Creado a partir de React y Css",
+        link: "https://buscador-peliculas-react-1231.netlify.app/",
+        gitHub: gitHub,
+        gitHubLink: "https://github.com/valeeennok/Buscador-Peliculas-React",
+        Image: "926shots_so.webp",
+        tags: [TAGS.REACT, TAGS.CSS],
+    },
+    {
+        title: "Seguidor de Mouse",
+        description:
+            "Sitio para seguir el mouse. Creado a partir de React y Css",
+        link: "https://mousefolower.netlify.app/",
+        gitHub: gitHub,
+        gitHubLink: "https://github.com/valeeennok/seguidor-puntero",
+        Image: "894shots_so.webp",
+        tags: [TAGS.REACT, TAGS.CSS],
+    },
+];
+---
+
+{
+    PROJECTS.map((project) => (
+        <article class="flex flex-col md:flex-row p-2 mb-5  ">
+            <div class="p-3  w-full flex-1  ">
+                <h3 class="text-2xl font-bold text-yellow-200 ">
+                    {project.title}
+                </h3>
+                <p class="mt-2 text-gray-400 dark:text-gray-900">
+                    {project.description}
+                </p>
+                <ul class="text-xl  text-pretty mb-4 mt-4 flex ">
+                    {project.tags.map((tag) => (
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs py-2 px-7 ${tag.class}`}
+                        >
+                            <li>
+                                <tag.icon class="size-9 color-blue-500" />
+                            </li>
+                        </span>
+                    ))}
+                </ul>
+                <div class="inline-flex items-center justify-center  px-2 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+                    <a href={project.gitHubLink} target="_blank">
+                        <project.gitHub class="size-5 color-blue-500" />
+                    </a>
+                    <span class="text-xs pt-0.5">GitHub</span>
+                </div>
+            </div>
+            <div class="flex-1">
+                <a class="" href={project.link} target="_blank">
+                    <img
+                        class="rounded-xl border-2 border-yellow-500 shadow-2xl shadow-white-10 max-w-[60%] h-100 hover:scale-150 transition-[0.3s] duration-[all] ease-[ease] "
+                        src={project.Image}
+                        alt="captura de pantalla del projecto"
+                    />
+                </a>
+            </div>
+        </article>
+    ))
+}

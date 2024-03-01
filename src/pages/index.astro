@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Social from "../components/Social.astro";
+import Email from "../components/icons/Email.astro";
+import Section from "../components/Section.astro";
+import Code from "../components/icons/Code.astro";	
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import Habilidades from "../components/Habilidades.astro";
+import Sobremi from "../components/Sobremi.astro";
+
+---
+
+<Layout title="Portfolio de Valentin - Desarrollador y Programador Web">
+	<main class="px-4 mb-20">
+		<Section class="py-44 pb-14 mb-4">
+			<!-- <img class="rounded-full w-12 h-12" src="" alt="logo" /> -->
+
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6
+				lg:pb-10"
+			>
+				Hola, Soy <span class="text-violet-400">Valentin</span>
+				<a
+					href="https://www.linkedin.com/in/valentin-david-mirarchi-17a0b824a/"
+					class="flex items-center transition md:justify-center md:hover:scale-105"
+					target="_blank"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+				Desarrollador Front-End. <span class="text-yellow-300">+2 años de experiencia</span> <span class="text-violet-400"
+					></span
+				>
+				<br />
+				<span class="opacity-60 text-xl">Buenos Aires, Argentina</span>
+				<img src="icons8-argentina-16.pngZæ" alt="" />
+			</h2>
+
+			<nav class="flex gap-x-4 mt-8 flex-wrap">
+				<Social
+					href="https://www.linkedin.com/in/valentin-david-mirarchi-17a0b824a/"
+				>
+					<LinkedIn class="size-4 lg:size-6" />
+					LinkedIn
+				</Social>
+				<Social href="https://github.com/valeeennok">
+					<GitHub class="size-4 lg:size-6" />
+					GitHub
+				</Social>
+				<Social>
+					<Email class="size-4 lg:w-6 h-6" />
+					valeeenn1@gmail.com
+				</Social>
+			</nav>
+		</Section>
+		<Section id="projectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-8"></Code>
+				Proyectos
+			</h2>
+			<Projects/>
+		</Section>
+		<Section id="habilidades">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<img class="size-10" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFNklEQVR4nO1ZaYgcRRSueARPPFAxHj9EjQfetz9UEATxj4gYE1Q8/nkFERMRfyiIiCAa1BiFKOgPkYiIIKLEZAVNfsTZeTW7IxEPVtZsZl5N93s9u5BD3W15NdWT2bl6to/d+ZEPmmmmX72j6h31qpQ6DKXCkfAoD4IbjOZnDfDHRvMO1LwHgQg1/YdAs/JugCuoaZcB+hyBXzZF/y4q0ElLPofVkncTanofgXyjOUzyINBBA/QtanooLIfLF9UAU6JbUNNIm1JlA7wJgR81JbrVK3nnBGPBKeGW8MgwDJfJuymYFRVdv9FAsMoAv4aatltDIh7AFaNpbVgIj87VAHEDBNqMQHMN4VRDza/USvWLkvJk4JOxSA+jpp9bJwWLdKXKA7Wx2sUI9KsTtM8AvVjRleOzlIHavxOBdzdWh/aLu2XJXyHwVVEcIFARR4MLVE6YmJg4xmje6GTNIdCTmTA2xfqF4kLOlb6cKkwdlwnjOLma1jpDZlHzvamYYRlPMMDjdnY0f51VVoliIVY+8DqXBGZwPDg/uUDgt50Rv9R2105MzEf7qyt65oxehsg3oek2FoE/dTr8kEh4bSy41hYzTf9Ux+iKNEbYLCcrW/LXSMpt1hB5L/lr5FsjE3YaE0ja1mScMQt3MXElF3BvqBSws+3cs+8DPN66al1dTLNWC0G1RJdHvjlVmD5NpYSd9UZKPYCan5PCKI9VEOhAQ8nuriWQNG+A0NIV6TY1KFDTm24G3h14UH9+1p3EiI5vwOvdym/rx8Noesnp9M5AQmU7gZqnZFBtNLguhf7NoG4+BbOinaY2WjurnU718RIE/lt0jBUuW4NoQBojsjZEYID+sBNcDK5XcUCgp1zx+0gNiDgFmq4FvK5TXvD8IK41vxzQ0yoOCPShJS7SE1nVBXlvBjvwelkFecSIQ7vf3sEewWh+zBm9WcXBAP9ol0/z7bF1QQf3y0y29Bbb5L/WupBF+o0gLuVWZJeKg9H8lxD3KoILVWy+4fa9zXB/db+C2ArZ57lu82BF83mqHxB4WoRIY9SLxs56XF2AYFUWW5R2GOBPnOwvVD+gpn+FcHLn5LG9aAzQ93F1wWjamnbT2A02ywHP9HN/C9s09TCko98u45ntNPLfoOk0KVDTC9FmVg4+uhMBTwqRP+6fm6QueOCdnbchYTlcjpp+c3HWvfEymsApcHXedSENqkW628WKF5SDUzsIpAu0/gf0QC8mWdWFtDCatvbcE7Z0Ze91G7y3OH26AR6LS7/2EKGL62UJb9S7RPol6Zs6ykV11L/ZKVPuNjjLupAFTLRtAfqsM5CiE5MeZ0tZ1oVsDkdY0v1Ex0fU9JZTbuNAzHLKTnGoaP8yOW51hnzXQeAVvUtdnq5LTKghQ0UM0LRFtivOiJqcvfXv2TV9oIYIZp4BvA+BN/RNKkbXV0oqtYNKfI0aEphDWXGDpPwBB9HrbuBPA7WXiwCTJB7lUC7q36tAD6ohgEmaWORE3AX+ntzvLfI0JAzDZc1K3tJjLBVMmlSPmh53GWy7WkKEYXiEq+KziRhIrNgTcaC5gTNFDjDSiTbcfG9iJlFdWaytRzdUge9xnjGikqLZwgJvUksEBP7G6fBMqptcF2g7M9VuUPm62QN5ctWQmJHcG7p9ze9qkWHsHQrtdxX9kdRX0y7QApUxDAT3VYvBHXJoLhPm2b6/vrJx7NTsAsWIV7MRmNN2Pb7bJD/TnUXehiBQwZ64A/0pvwj8lRyqy6VsLgIzZboUjZk5bMhwtspqmPE/KYwvkrJsDysAAAAASUVORK5CYII=">
+				Habilidades
+			</h2>
+			<Habilidades/>
+		</Section>
+
+		<Section id="about">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAELElEQVR4nO2ZTYgcVRCAn4n/oomKSBA9+JtogoKCQcGDICq5eVBR4iF6iYqKCEFPBkFPUXPwD0E8yvoXEcQYZXe73sxuYAL+TFjcOOmqnq7qcY1jFBWNPy3V/Xo14s5Pz7qvxf2gT/Oqpqr7vfp7xiyzzH+LqB5diJbvJODtBLITgZ8my49hLbk+HU+PNVUmHUtXhhBvQctNspIu9CDwF1FNrjNVBCfn1hBI/U9jhcnyGFp5hqw8nD36Zax87n7/ES0/h7X4GlMVwvFw9byBVmaxlmxK0/SYf1qbpukKBN5x9BeS17jBJxvfoOVXnVH7Wo3uqn7rM2cCuZSAH0LLc072LeOTFvB5aPlXtPzLQWhfPqw8Qed8stJVZ6JAbjK+iAK5N3+j/GZZHQT8eLHFjC/QytsuEt1dVkc4Jevcy2gZX6DlaTUihM7GUcI2WfkJgX/3dugR5EDmSI3XjqKHgL/N9IyHqxfPuqEMkBk14KCNLxlFD4L8oHpmpw+dtnjWDWUAT2YRZ4RMHdWjM/IcxN8bX2ikyR2Jby+rox0kV7uA8anxhRaCLqM/VVYHgjziHHnB+CKq8Y1Z6AT+qKwOsvxuHvn4DuOLEORm58h3ZcrzZrN5PAEfzr5ILdlkfIGWJ5wj2xYqFHuhMgT8aK5DPjS+mA+/JeqsApV1mX2/8QUBv57v73hLWR1o+R7nyJjxBYHc5cpw0uZpaPm86VLZFAPZbHyR1UnAb2idpGWG9hoDy6bpiqI00eo5HUtXGt+QlY/zA5tcNqhMVO9scId8xlQFAtnpEuOTg8poEnWlyYumKhDIle6sdCWQswaprxDk6/xs8LWmSiDILveGJ+K98ZkLrZuxX52KILud43tM1Yjq0TkE3OnXaGnv4pLoYbJfXmCqCFnZ18+RbILiBnWmqiDwZ32/iOvREaRtqgq61jeqJet7jZDcWZozVaQ11Tlbuzw1Mp6Mz11wXaO7Kk+g8rM6ZapEVO9sQCufuC3zfr/1WlcVyZCsXLU0VvZAM7l2dgR8ZH72Ozm3xvRBw3Mxtc8mlSCvhDa+wiwl2kCFILdoV5htkTwC/aYz4GHGOZpPCORllZ0faFsBguTWRiM97l9zIBwPT0Tg+4tq1W0jHeO81Otw99U7JesQ+PnifDm9MQE/GNWjkxbNAe3isguc7M6jeHPcxBo/QECnL9b/tLIgkNxXnDVXFYv2K2W6z6NIdienIMg7f3Fgeimm5gR8w98ujnapLaWUzb43ewKCBE7RIbLxbWaJwUA2F1tObdFhxfBKrDxbZOA4iC82PkM7SNsFlR1DCbcn2hfp5Y1GFJ0EGs+E0NmYRTfgI3pjPLAgWX7ChcMPTEUgK3tc1bx9YCEE3usO2lZTEcjK1iLgDCP0Ta+7cs9PdyAnNAlVwNi016PJeYSPu8wy/zv+ANyxbsQCi7IbAAAAAElFTkSuQmCC">
+				Sobre mi
+			</h2>
+			<Sobremi/>
+		</Section>
+	</main>
+</Layout>

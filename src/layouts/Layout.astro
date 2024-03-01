@@ -1,0 +1,52 @@
+---
+import "@fontsource-variable/onest";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/icons8-portafolio-16.png"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio de Valentin - Desarrollador y Programador Web</title>
+	</head>
+	<body class="px-6">
+		<Header />
+		<slot />
+		<Footer />
+		
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: dark;
+	}
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		background: radial-gradient(95% 125% at 50% 10%, #110414 40%, #63e 100%);
+		/* min-height: 100vh; */
+	}
+	#header-nav {
+		animation: blur linear both 0.5s;
+		animation-timeline: scroll();
+		animation-range: 0 500px;
+	}
+	@media (prefers-reduce-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>
